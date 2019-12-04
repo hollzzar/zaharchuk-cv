@@ -15,8 +15,6 @@ nocite: "@*"
 docname: "Curriculum vitae"
 csl: apa6.csl
 headcolor: 414141
-header-includes:
-  - \usepackage{amsmath}
 ---
 
 ```{r setup, include=FALSE}
