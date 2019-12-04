@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+#Change language classification
+*.Rmd linguist-language=R
+*.bib linguist-language=R
+*.csl linguist-language=R
+*.pdf linguist-language=R
