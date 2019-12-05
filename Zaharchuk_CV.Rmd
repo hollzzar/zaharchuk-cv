@@ -68,11 +68,13 @@ honors <- read_csv("./data/honors.csv",
 
 #Create where and when fields
 honors <- honors %>%
-  arrange(desc(begin), end) %>%
+  arrange(!is.na(desc(end)), desc(end), begin) %>%
   mutate(where = as.character(glue("{city}, {region}")),
          when = ifelse(is.na(year(end)),
-                       as.character(glue("{year(begin)} - present")),
-                       as.character(glue("{year(begin)} - {year(end)}"))))
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
 
 #Print honors and awards information
 honors %>% 
@@ -141,11 +143,13 @@ experience <- read_csv("./data/experience.csv",
 
 #Create where and when fields
 experience <- experience %>%
-  arrange(desc(begin), end) %>%
+  arrange(!is.na(desc(end)), desc(end), begin) %>%
   mutate(where = as.character(glue("{city}, {region}")),
-         when = as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - 
-                                  {if_else(!is.na(end), paste(month(end, label = TRUE, abbr = TRUE), 
-                                  year(end)), 'present')}")))
+         when = ifelse(is.na(year(end)),
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
 
 #Print research experience information
 experience %>% 
@@ -173,11 +177,13 @@ outreach <- read_csv("./data/outreach.csv",
 
 #Create where and when fields
 outreach <- outreach %>%
-  arrange(desc(begin), end) %>%
+  arrange(!is.na(desc(end)), desc(end), begin) %>%
   mutate(where = as.character(glue("{city}, {region}")),
-         when = as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - 
-                                  {if_else(!is.na(end), paste(month(end, label = TRUE, abbr = TRUE), 
-                                  year(end)), 'present')}")))
+         when = ifelse(is.na(year(end)),
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
 
 #Print outreach information
 outreach %>% 
@@ -195,11 +201,13 @@ service <- read_csv("./data/service.csv",
 
 #Create where and when fields
 service <- service %>%
-  arrange(desc(begin), end) %>%
+  arrange(!is.na(desc(end)), desc(end), begin) %>%
   mutate(where = as.character(glue("{city}, {region}")),
-         when = as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - 
-                                  {if_else(!is.na(end), paste(month(end, label = TRUE, abbr = TRUE), 
-                                  year(end)), 'present')}")))
+         when = ifelse(is.na(year(end)),
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
 
 #Print service information
 service %>% 
