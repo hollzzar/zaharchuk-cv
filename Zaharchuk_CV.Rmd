@@ -104,6 +104,7 @@ bib <- bib %>%
 bib$editor[bib$title == "Beat gestures facilitate speech production"] <- "P Bello and M Guarini and M McShane and B Scassellati"
 bib$address[bib$title == "Beat gestures facilitate speech production"] <- "Red Hook, NY"
 bib$publisher[bib$title == "Beat gestures facilitate speech production"] <- "Curran Associates"
+bib$booktitle[bib$title == "Beat gestures facilitate speech production"] <- "{Proceedings of the 36th Annual Meeting of the Cognitive Science Society}"
 
 #Format as BibEntry
 bib <- bib %>% RefManageR::as.BibEntry()
@@ -112,8 +113,8 @@ bib <- bib %>% RefManageR::as.BibEntry()
 bib %>% 
   RefManageR::WriteBib("my_cv.bib")
 
-# #Print bibliography
-# bibliography_entries("my_cv.bib")
+#Print bibliography
+bibliography_entries("my_cv.bib")
 ```
 
 \setlength{\parindent}{-0.2in}
