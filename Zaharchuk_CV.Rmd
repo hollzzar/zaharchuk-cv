@@ -223,6 +223,6 @@ Languages: English (native proficiency), Spanish (intermediate proficiency)
 
 # Affiliations
 
-- Women in Cognitive Science
-- Psychonomic Society
 - Cognitive Neuroscience Society
+- Psychonomic Society
+- Women in Cognitive Science
