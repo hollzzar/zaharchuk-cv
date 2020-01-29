@@ -68,7 +68,7 @@ honors <- read_csv("./data/honors.csv",
 
 #Create where and when fields
 honors <- honors %>%
-  arrange(!is.na(desc(end)), desc(end), begin) %>%
+  arrange(desc(begin), end) %>%
   mutate(where = as.character(glue("{city}, {region}")),
          when = ifelse(is.na(year(end)),
                        as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
@@ -191,9 +191,9 @@ outreach %>%
   detailed_entries(position, when, organization, where, c(desc_1, desc_2), .protect = FALSE)
 ```
 
-# Service
+```{r service, echo=FALSE, eval=FALSE}
+# Community service
 
-```{r service}
 #Read in data
 service <- read_csv("./data/service.csv",
                       col_types = cols(
@@ -217,7 +217,7 @@ service %>%
 
 # Skills
 
-Programming: R, MATLAB, \LaTeX, SQL, Python, E-Prime, Praat
+Programming: R, MATLAB, Python, \LaTeX, SQL, E-Prime, Praat, ELAN
 
 Languages: English (native proficiency), Spanish (intermediate proficiency)
 
