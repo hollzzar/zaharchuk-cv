@@ -14,7 +14,7 @@ bibliography_present: my_presentations.bib
 nocite: "@*"
 docname: "Curriculum vitae"
 csl: apa6.csl
-headcolor: 414141
+headcolor: 000000
 ---
 
 ```{r setup, include=FALSE}
@@ -167,6 +167,35 @@ experience %>%
   detailed_entries(position, when, organization, where, c(pi, desc_1, desc_2), .protect = FALSE)
 ```
 
+# Teaching experience
+
+```{r teaching}
+#Read in data
+teaching <- read_csv("./data/teaching.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")))
+
+#Create where and when fields
+teaching <- teaching %>%
+  arrange(desc(begin), end) %>%
+  group_by(course) %>%
+  mutate(where = ifelse(n() > 1,
+                         as.character(glue("{nth(city, 1)}, {nth(region, 1)}, {nth(country,1)} 
+                                           and {nth(city, 2)}, {nth(region, 2)}, {nth(country,2)}")),
+                         as.character(glue("{city}, {region}")))) %>% 
+  ungroup() %>%
+  mutate(when = ifelse(is.na(year(end)),
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
+
+#Print teaching information
+teaching %>% 
+  detailed_entries(role, when, course, university, c(instructor, desc_1, desc_2), .protect = FALSE)
+```
+
 # Outreach
 
 ```{r outreach}
@@ -191,8 +220,11 @@ outreach %>%
   detailed_entries(position, when, organization, where, c(desc_1, desc_2), .protect = FALSE)
 ```
 
-```{r service, echo=FALSE, eval=FALSE}
 # Community service
+
+```{r service}
+# Community service
+# echo=FALSE, eval=FALSE
 
 #Read in data
 service <- read_csv("./data/service.csv",
