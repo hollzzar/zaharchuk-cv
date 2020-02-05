@@ -220,6 +220,8 @@ outreach %>%
   detailed_entries(position, when, organization, where, c(desc_1, desc_2), .protect = FALSE)
 ```
 
+\pagebreak
+
 # Community service
 
 ```{r service}
