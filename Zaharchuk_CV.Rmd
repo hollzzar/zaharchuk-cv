@@ -48,13 +48,13 @@ education <- education %>%
                                            and {nth(city, 2)}, {nth(region, 2)}, {nth(country,2)}")),
                          as.character(glue("{city}, {region}")))) %>% 
   ungroup() %>%
-  mutate(when = ifelse(is.na(year(end)),
+  mutate(when = ifelse(is.na(end),
                        as.character(glue("{year(begin)} - present")),
                        as.character(glue("{year(begin)} - {year(end)}"))))
 
 #Print education information
 education %>% 
-  detailed_entries(degree, when, university, where, c(advisor, thesis, award_1, award_2), .protect = FALSE)
+  detailed_entries(degree, when, university, where, c(advisor, thesis), .protect = FALSE)
 ```
 
 # Honors and awards
@@ -68,13 +68,14 @@ honors <- read_csv("./data/honors.csv",
 
 #Create where and when fields
 honors <- honors %>%
-  arrange(desc(begin), end) %>%
+  arrange(order) %>%
   mutate(where = as.character(glue("{city}, {region}")),
-         when = ifelse(is.na(year(end)),
-                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
-                       ifelse(end==begin,
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
+         when = ifelse(is.na(begin), "Postponed due to COVID-19",
+                       ifelse(is.na(year(end)),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                              ifelse(end==begin,
+                                     as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                                     as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}"))))))
 
 #Print honors and awards information
 honors %>% 
@@ -220,8 +221,6 @@ outreach %>%
   detailed_entries(position, when, organization, where, c(desc_1, desc_2), .protect = FALSE)
 ```
 
-\pagebreak
-
 # Community service
 
 ```{r service}
@@ -257,6 +256,7 @@ Languages: English (native proficiency), Spanish (intermediate proficiency)
 
 # Affiliations
 
+- Center for Language Science
 - Cognitive Neuroscience Society
 - Psychonomic Society
 - Women in Cognitive Science
