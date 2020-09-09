@@ -1,5 +1,5 @@
-﻿award,begin,end,university,city,region,country,desc
-University Graduate Fellowship,8/26/18,,The Pennsylvania State University,University Park,Pennsylvania,United States,Five-year fellowship for research doctoral students
-University Scholar Award,9/30/11,6/13/15,The University of Chicago,Chicago,Illinois,United States,Four-year merit scholarship
-NSF-PIRE (Partnerships for International Research and Education) Fellowship,5/8/20,6/19/20,The Pennsylvania State University,University Park,Pennsylvania,United States,Eight-week fellowship to conduct field research in Colombia
-Bruce V. Moore Graduate Fellowship in Psychology,11/1/19,11/1/19,The Pennsylvania State University,University Park,Pennsylvania,United States,Travel award for poster presentation at Psychonomic Society 60th Annual Meeting
+﻿order,award,begin,end,university,city,region,country,desc
+3,University Graduate Fellowship,8/26/18,,The Pennsylvania State University,University Park,Pennsylvania,United States,Five-year fellowship for research doctoral students
+4,University Scholar Award,9/30/11,6/13/15,The University of Chicago,Chicago,Illinois,United States,Four-year merit scholarship
+1,NSF-funded Partnerships for International Research and Education (PIRE) Fellowship,,,The Pennsylvania State University,University Park,Pennsylvania,United States,Eight-week fellowship to conduct field research in Colombia in Summer 2020
+2,Bruce V. Moore Graduate Fellowship in Psychology,11/1/19,11/1/19,The Pennsylvania State University,University Park,Pennsylvania,United States,Travel award for poster presentation at Psychonomic Society 60th Annual Meeting
