@@ -15,7 +15,7 @@ bibliography_main: my_cv.bib
 bibliography_present: my_presentations.bib
 nocite: "@*"
 docname: "Curriculum vitae"
-csl: apa7.csl
+csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
