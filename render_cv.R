@@ -14,3 +14,6 @@ readr::read_lines("Zaharchuk_CV_temp.tex") %>%
 
 # Compile PDF
 tinytex::latexmk("Zaharchuk_CV.tex", engine = "xelatex") 
+
+#Create md version for website: run in Terminal
+# pandoc -s Zaharchuk_CV.tex -o Zaharchuk_CV.md
