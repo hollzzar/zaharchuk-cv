@@ -10,7 +10,7 @@ date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
     pandoc_args: ["--lua-filter", "/Users/hollyzaharchuk/Mirror/format_files/multiple-bibliographies-new.lua"]
-    keep_tex: true
+    keep_tex: TRUE
 bibliography_main: my_cv.bib
 bibliography_present: my_presentations.bib
 nocite: "@*"
