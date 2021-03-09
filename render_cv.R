@@ -9,6 +9,10 @@ setwd("~/Mirror/zaharchuk-cv")
 # Render initial files
 render("Zaharchuk_CV_temp.Rmd")
 
+# Remove temp pdf
+  # I don't render directly to tex because it throws an error
+unlink("Zaharchuk_CV_temp.pdf")
+
 # Bold name
 readr::read_lines("Zaharchuk_CV_temp.tex") %>% 
   str_replace_all("Zaharchuk, H. A.", "\\\\textbf{Zaharchuk, H. A.}") %>%
