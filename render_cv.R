@@ -2,7 +2,6 @@
 library(rmarkdown)
 library(stringr)
 library(magrittr)
-library(ymlthis)
 
 # Set working directory
 setwd("~/Mirror/zaharchuk-cv")
