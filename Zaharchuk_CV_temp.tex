@@ -1,0 +1,312 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-red}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Holly A. Zaharchuk}{}
+
+\position{Graduate student}
+\address{University Park, Pennsylvania, United States}
+
+\email{\href{mailto:hzaharchuk@psu.edu}{\nolinkurl{hzaharchuk@psu.edu}}}
+\homepage{www.hzaharchuk.com}
+\orcid{0000-0002-7693-7807}
+\github{hollzzar}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {March 2021}
+    {Holly A. Zaharchuk~~~·~~~Curriculum vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{research-interests}{%
+\section{Research interests}\label{research-interests}}
+
+My research interests lie at the intersection of cognitive psychology
+and sociolinguistics. I investigate and challenge the boundaries between
+dialects and languages with EEG, behavioral methods, and field work. My
+particular areas of study include syntactic variation, code-switching,
+and network models of language.
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Ph.D., Psychology and Language Science, Specialization in Cognitive and Affective Neuroscience}{The Pennsylvania State University}{University Park, Pennsylvania}{2018 - present}{\begin{cvitems}
+\item Advisor: Dr. Janet G. van Hell
+\end{cvitems}}
+    \cventry{M.S., Psychology}{The Pennsylvania State University}{University Park, Pennsylvania}{2018 - 2020}{\begin{cvitems}
+\item Advisor: Dr. Janet G. van Hell
+\item Master's thesis: \textit{We ``might could'' revisit syntactic processing: Studying dialectal variation with event-related potentials}
+\end{cvitems}}
+    \cventry{B.A., Psychology, Minor in Linguistics}{The University of Chicago}{Chicago, Illinois}{2011 - 2015}{\begin{cvitems}
+\item Advisor: Dr. Daniel Casasanto
+\item Honors thesis: \textit{Does linguistic experience change mental representations of pitch?}
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{honors-and-awards}{%
+\section{Honors and awards}\label{honors-and-awards}}
+
+\begin{cventries}
+    \cventry{Eight-week fellowship to conduct field research in Colombia in Summer 2020}{NSF-funded Partnerships for International Research and Education (PIRE) Fellowship}{The Pennsylvania State University}{Postponed due to COVID-19}{}\vspace{-4.0mm}
+    \cventry{Travel award for poster presentation at Psychonomic Society 60th Annual Meeting}{Bruce V. Moore Graduate Fellowship in Psychology}{The Pennsylvania State University}{Nov 2019}{}\vspace{-4.0mm}
+    \cventry{Five-year fellowship for research doctoral students}{University Graduate Fellowship}{The Pennsylvania State University}{Aug 2018 - present}{}\vspace{-4.0mm}
+    \cventry{Four-year merit scholarship}{University Scholar Award}{The University of Chicago}{Sep 2011 - Jun 2015}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+
+\noindent
+
+\hypertarget{refs_main}{}
+\leavevmode\hypertarget{ref-1}{}%
+Lucero, C., Zaharchuk, H., \& Casasanto, D. (2014). Beat gestures
+facilitate speech production. In P. Bello, M. Guarini, M. McShane, \& B.
+Scassellati (Eds.), \emph{{Proceedings of the 36th Annual Meeting of the
+Cognitive Science Society}}. Curran Associates.
+
+\hypertarget{presentations}{%
+\section{Presentations}\label{presentations}}
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+
+\noindent
+
+\hypertarget{refs_present}{}
+\leavevmode\hypertarget{ref-1}{}%
+Zaharchuk, H. A. (2015). \emph{\emph{Does linguistic experience change
+mental representations of pitch?}} Poster session presented at the
+{University of Chicago Undergraduate Research Symposium, Chicago,
+Illinois}.
+
+\leavevmode\hypertarget{ref-3}{}%
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2020). \emph{\emph{We
+{``might could''} revisit syntactic processing: Studying dialectal
+variation with event-related potentials}}. Poster session to be
+presented at the {27th Annual Meeting of the Cognitive Neuroscience
+Society, Boston, Massachusetts}.
+
+\leavevmode\hypertarget{ref-2}{}%
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2019).
+\emph{\emph{Auditory comprehension of double versus single modal
+constructions in {M}ainstream {A}merican {E}nglish listeners}}. Poster
+session presented at the {60th Annual Meeting of the Psychonomic
+Society, Montr{é}al, Qu{é}bec, Canada}.
+
+\hypertarget{research-experience}{%
+\section{Research experience}\label{research-experience}}
+
+\begin{cventries}
+    \cventry{Graduate student}{Bilingualism and Language Development Lab}{University Park, Pennsylvania}{Aug 2018 - present}{\begin{cvitems}
+\item Principal investigator: Dr. Janet G. van Hell
+\item Research areas: language processing and dialectal variation
+\item Responsibilities: design, implement, and run EEG and behavioral experiments with E-Prime; process and analyze experimental data with R and MATLAB; mentor undergraduate research assistants; maintain lab equipment and supplies
+\end{cvitems}}
+    \cventry{Undergraduate research assistant}{Experience and Cognition Lab}{Chicago, Illinois}{Sep 2013 - Jun 2015}{\begin{cvitems}
+\item Principal investigator: Dr. Daniel Casasanto
+\item Research areas: embodied cognition and linguistic relativity
+\item Responsibilities: train, run, and debrief participants; code and analyze experimental data with ELAN and R; create new experiments with Python
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{professional-experience}{%
+\section{Professional experience}\label{professional-experience}}
+
+\begin{cventries}
+    \cventry{Financial analyst}{Consumer Financial Protection Bureau}{Washington, District of Columbia}{Jul 2017 - Jul 2018}{\begin{cvitems}
+\item Collaborated with the Consumer Education and Engagement Division to write a \href{https://www.consumerfinance.gov/about-us/blog/five-ways-banks-and-lenders-work-people-who-speak-or-understand-limited-english/}{\underline{spotlight report on language access}} for limited English proficient consumers as a member of the Language Access Task Force
+\item Researched debt collection and debt relief, particularly in the credit card and student loan markets, for the Consumer Lending, Reporting, and Collections Markets team
+\end{cvitems}}
+    \cventry{Director's financial analyst}{Consumer Financial Protection Bureau}{Washington, District of Columbia}{Jul 2015 - Jul 2017}{\begin{cvitems}
+\item Supported the policy and research teams in the Office of Fair Lending and Equal Opportunity
+\item Performed business analytics, tracking, and reporting in the Supervision, Enforcement, and Fair Lending Front Office
+\end{cvitems}}
+    \cventry{Program and operations assistant}{Research Development Support (formerly Arete)}{Chicago, Illinois}{Feb 2013 - Jun 2015}{\begin{cvitems}
+\item Partnered with The University of Chicago research administration support faculty members pursuing complex research initiatives
+\item Provided program analysis, strategic planning, business metrics, and event support
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{teaching-experience}{%
+\section{Teaching experience}\label{teaching-experience}}
+
+\begin{cventries}
+    \cventry{Teaching assistant}{Basic Research Methods in Psychology}{The Pennsylvania State University}{Aug 2020 - Dec 2020}{\begin{cvitems}
+\item Instructor: Dr. Nicholas Pearson
+\item Introduction to experimental design, analysis, and presentation
+\item Led weekly laboratory section to reinforce lecture concepts
+\end{cvitems}}
+    \cventry{Teaching assistant}{What makes us human?}{The Pennsylvania State University}{Jan 2020 - May 2020}{\begin{cvitems}
+\item Instructor: Dr. Daniel Weiss
+\item Senior seminar in comparative psychology
+\end{cvitems}}
+    \cventry{Teaching assistant}{Neurological bases of human behavior}{The Pennsylvania State University}{Aug 2019 - Dec 2019}{\begin{cvitems}
+\item Instructor: Dr. Stephen Wilson
+\item Introduction to neuroscience theories and methods
+\item Presented guest lecture on auditory system and neuroanatomy of language production and comprehension
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{outreach}{%
+\section{Outreach}\label{outreach}}
+
+\begin{cventries}
+    \cventry{The Brain Bus coordinator}{Bilingualism and Language Development Lab}{University Park, Pennsylvania}{Aug 2018 - present}{\begin{cvitems}
+\item Maintain \textit{The Brain Bus}, BiLD's mobile neuroscience lab for field research and language science public engagement
+\item Participate in community outreach events, including as a volunteer judge at the Young Scholars of Western PA science fair
+\end{cvitems}}
+    \cventry{Graduate assistant}{Center for Language Science}{University Park, Pennsylvania}{Aug 2019 - Dec 2019}{\begin{cvitems}
+\item Managed the Center's social media presence to engage the wider regional community in language science research
+\item Created and solicited content for the \href{https://sites.psu.edu/bilingualismmatters/}{\underline{Winter/Spring 2020 Bilingualism Matters newsletter}}
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{community-service}{%
+\section{Community service}\label{community-service}}
+
+\begin{cventries}
+    \cventry{Mathematics tutor}{Next Step Public Charter School}{Washington, District of Columbia}{Jan 2017 - Jul 2018}{\begin{cvitems}
+\item Volunteered as a mathematics tutor with the bilingual GED and ESL program for immigrant and other at-risk youth
+\item Provided one-on-one assistance with practice problems and assignments once per week for 1-2 hours
+\end{cvitems}}
+    \cventry{Volunteer tax preparer}{Community Tax Aid}{Washington, District of Columbia}{Jan 2016 - Apr 2018}{\begin{cvitems}
+\item Volunteered as an IRS-certified advanced volunteer tax preparer with the Volunteer Income Tax Assistance (VITA) program, which offers free tax help to individuals who make \$54,000 or less, individuals with disabilities, and limited English speaking individuals who need assistance in preparing their own tax returns
+\item Provided tax preparation services once per week for 3-4 hours during tax season
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{skills}{%
+\section{Skills}\label{skills}}
+
+Programming: R, MATLAB, Python, \LaTeX, SQL, E-Prime, Praat, ELAN
+
+Languages: English (native proficiency), Spanish (intermediate
+proficiency)
+
+\hypertarget{affiliations}{%
+\section{Affiliations}\label{affiliations}}
+
+\begin{itemize}
+\tightlist
+\item
+  Center for Language Science
+\item
+  Cognitive Neuroscience Society
+\item
+  Psychonomic Society
+\item
+  Women in Cognitive Science
+\end{itemize}
+
+\end{document}
