@@ -1,6 +1,6 @@
 ---
 name: Holly A. Zaharchuk
-position: "PhD Candidate"
+position: "PhD Candidate (she/her/hers)"
 address: "University Park, Pennsylvania, United States"
 email: "hzaharchuk@psu.edu"
 www: www.hzaharchuk.com
