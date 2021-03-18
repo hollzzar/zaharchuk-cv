@@ -86,6 +86,12 @@ honors %>%
 # Publications
 
 ```{r scholarship, echo=FALSE, eval=FALSE}
+## Chunk set to eval=FALSE
+## I wanted to keep the code I wrote to pull my pubs from Google Scholar, 
+## but I prefer to update them manually in BibDesk
+## Google Scholar entries aren't totally correct, so I have to edit the entries
+## a lot anyway
+
 #Pull publications from Google Scholar
 bib <- scholar::get_publications("XN7j-40AAAAJ") %>%
   distinct(title, .keep_all = TRUE)
