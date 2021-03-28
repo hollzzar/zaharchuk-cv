@@ -255,6 +255,10 @@ service %>%
   detailed_entries(position, when, organization, where, c(desc_1, desc_2))
 ```
 
+# Academic service
+
+- Ad hoc reviewer: *Brain and Language*
+
 # Skills
 
 Programming: R, MATLAB, Python, \LaTeX, SQL, E-Prime, Praat, ELAN
