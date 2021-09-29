@@ -1,6 +1,6 @@
 ---
 name: Holly A. Zaharchuk
-position: "PhD Candidate (she/her/hers)"
+position: "PhD Candidate (she/her)"
 address: "University Park, Pennsylvania, United States"
 email: "hzaharchuk@psu.edu"
 www: www.hzaharchuk.com
@@ -29,7 +29,7 @@ library(rlang)
 
 # Research interests
 
-My research interests lie at the intersection of cognitive psychology and sociolinguistics. I investigate and challenge the boundaries between dialects and languages with EEG, behavioral methods, and field work. My particular areas of study include syntactic variation, code-switching, and network models of language.
+My research interests lie at the intersection of cognitive psychology and sociolinguistics. I use neuropsychological (EEG) and behavioral methods to understand how linguistic, cognitive, and social factors interact during language processing. My particular areas of study include phonetic and syntactic variation, code-switching, and network models of language.
 
 # Education
 
