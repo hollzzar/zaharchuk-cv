@@ -20,10 +20,12 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt,a4paper,]{awesome-cv}
 
 % Configure page margins with geometry
+\usepackage{geometry}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -84,7 +86,7 @@
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
+\setlength{\csllabelwidth}{2em}
 \newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
@@ -98,8 +100,8 @@
  {}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -111,10 +113,6 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 % 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
-\makecvfooter
-  {September 2021}
-    {Holly A. Zaharchuk~~~·~~~Curriculum vitae}
-  {\thepage}
 
 
 %-------------------------------------------------------------------------------
@@ -131,8 +129,8 @@ My research interests lie at the intersection of cognitive psychology
 and sociolinguistics. I use neuropsychological (EEG) and behavioral
 methods to understand how linguistic, cognitive, and social factors
 interact during language processing. My particular areas of study
-include phonetic and syntactic variation, code-switching, and network
-models of language.
+include phonetic and syntactic variation, bilingual code-switching, and
+network models of language.
 
 \hypertarget{education}{%
 \section{Education}\label{education}}
@@ -140,6 +138,7 @@ models of language.
 \begin{cventries}
     \cventry{Ph.D., Psychology and Language Science, Specialization in Cognitive and Affective Neuroscience}{The Pennsylvania State University}{University Park, Pennsylvania}{2018 - present}{\begin{cvitems}
 \item Advisor: Dr. Janet G. van Hell
+\item Dissertation: \textit{Cross-language transfer in voice onset time: A window into perceptual adaptation in brain and behavior}
 \end{cvitems}}
     \cventry{M.S., Psychology}{The Pennsylvania State University}{University Park, Pennsylvania}{2018 - 2020}{\begin{cvitems}
 \item Advisor: Dr. Janet G. van Hell
@@ -155,8 +154,9 @@ models of language.
 \section{Honors and awards}\label{honors-and-awards}}
 
 \begin{cventries}
-    \cventry{Eight-week fellowship to conduct field research in Colombia in Summer 2020}{NSF-funded Partnerships for International Research and Education (PIRE) Fellowship}{The Pennsylvania State University}{Postponed due to COVID-19}{}\vspace{-4.0mm}
-    \cventry{Travel award for poster presentation at Psychonomic Society 60th Annual Meeting}{Bruce V. Moore Graduate Fellowship in Psychology}{The Pennsylvania State University}{Nov 2019}{}\vspace{-4.0mm}
+    \cventry{NSF grant supporting doctoral research on human language}{Doctoral Dissertation Research Improvement Grant (Ling-DDRI)}{The Pennsylvania State University}{Feb 2023 - Dec 2023}{}\vspace{-4.0mm}
+    \cventry{NSF-funded fellowship to conduct field research in Colombia}{Partnerships for International Research and Education Fellowship (PIRE)}{The Pennsylvania State University}{May 2022 - Jun 2022}{}\vspace{-4.0mm}
+    \cventry{Travel award to discuss dissertation and career plans with Dr. Emily Myers (UConn)}{Adele Miccio Memorial Travel Award}{The Pennsylvania State University}{Dec 2021}{}\vspace{-4.0mm}
     \cventry{Five-year fellowship for research doctoral students}{University Graduate Fellowship}{The Pennsylvania State University}{Aug 2018 - present}{}\vspace{-4.0mm}
     \cventry{Four-year merit scholarship}{University Scholar Award}{The University of Chicago}{Sep 2011 - Jun 2015}{}\vspace{-4.0mm}
 \end{cventries}
@@ -164,63 +164,96 @@ models of language.
 \hypertarget{publications}{%
 \section{Publications}\label{publications}}
 
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
-
-\noindent
-
-\hypertarget{refs_main}{}
-\leavevmode\hypertarget{ref-2}{}%
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
 Zaharchuk, H. A., \& Karuza, E. A. (2021). Multilayer networks: An
 untapped tool for understanding bilingual neurocognition. \emph{Brain
 and Language}, \emph{220}, 104977.
 
-\leavevmode\hypertarget{ref-3}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-3}{}}%
 Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2021). Are our brains
 more prescriptive than our mouths? Experience with dialectal variation
-in syntax differentially impacts {ERPs} and behavior. \emph{Brain and
+in syntax differentially impacts ERPs and behavior. \emph{Brain and
 Language}, \emph{218}, 104949.
 
-\leavevmode\hypertarget{ref-1}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
 Lucero, C., Zaharchuk, H., \& Casasanto, D. (2014). Beat gestures
 facilitate speech production. In P. Bello, M. Guarini, M. McShane, \& B.
-Scassellati (Eds.), \emph{{Proceedings of the 36th Annual Meeting of the
-Cognitive Science Society}}. Red Hook, NY: Curran Associates.
+Scassellati (Eds.), \emph{Proceedings of the 36th Annual Meeting of the
+Cognitive Science Society}. Red Hook, NY: Curran Associates.
 
 \hypertarget{presentations}{%
 \section{Presentations}\label{presentations}}
 
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-9}{}}%
+Zaharchuk, H. A., \& Van Hell, J. G. (2023, October). Investigating the
+roles of acoustic-phonetic and lexico-semantic processing in resolving
+perceptual ambiguity in spanish-accented english {[}Poster session{]}.
+15th Annual Meeting of the Society for the Neurobiology of Language
+(SNL), Marseille, France.
 
-\noindent
+\leavevmode\vadjust pre{\hypertarget{ref-8}{}}%
+Zaharchuk, H. A., Lipski, J., \& Van Hell, J. G. (2023, August). Mi casa
+es tu posá: Exploring the bilingual mental lexicon in speakers of
+spanish and palenquero {[}Poster session{]}. Architectures and
+Mechanisms for Language Processing Conference (AMLaP 29), Donostia-San
+Sebastián, Spain.
 
-\hypertarget{refs_present}{}
-\leavevmode\hypertarget{ref-4}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-6}{}}%
+Zaharchuk, H. A., Medina, V., Paterno, S., Viswanathan, N., \& Van Hell,
+J. G. (2023, March). Sentential context impacts bilingual
+speech-in-speech recognition {[}Poster session{]}. 36th Annual
+Conference on Human Sentence Processing (HSP), Pittsburgh, Pennsylvania.
+
+\leavevmode\vadjust pre{\hypertarget{ref-7}{}}%
+Zaharchuk, H. A., Walker, A., \& Van Hell, J. G. (2023, March). Tracking
+the time-course of cross-dialect comprehension with ERPs {[}Oral and
+poster sessions{]}. 30th Annual Meeting of the Cognitive Neuroscience
+Society (CNS), San Francisco, California.
+
+\leavevmode\vadjust pre{\hypertarget{ref-5}{}}%
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2022, November).
+Experiencia con variación dialéctica en sintaxis afecta el procesamiento
+de lenguaje {[}Plenary session{]}. III Congreso Paraguayo de Lingüı́stica
+Aplicada (CONPLA), Asunción, Paraguay.
+
+\leavevmode\vadjust pre{\hypertarget{ref-4}{}}%
 Walker, A., Zaharchuk, H. A., Fernandez, C. B., \& Van Hell, J. G.
-(2021, August). \emph{The role of dialect expectation on lexical
-processing: EEG evidence}. Talk presented at the {5th Variation and
-Language Processing Conference (VALP5), Copenhagen, Denmark}.
+(2021, August). The role of dialect expectation on lexical processing:
+EEG evidence {[}Oral session{]}. 5th Variation and Language Processing
+Conference (VALP5), Copenhagen, Denmark.
 
-\leavevmode\hypertarget{ref-3}{}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2020, May). \emph{We
+\leavevmode\vadjust pre{\hypertarget{ref-3}{}}%
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2020, May). We
 {``might could''} revisit syntactic processing: Studying dialectal
-variation with event-related potentials}. Poster session presented at
-the {27th Annual Meeting of the Cognitive Neuroscience Society, Boston,
-Massachusetts}.
+variation with event-related potentials {[}Poster session{]}. 27th
+Annual Meeting of the Cognitive Neuroscience Society (CNS), Boston,
+Massachusetts.
 
-\leavevmode\hypertarget{ref-2}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
 Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2019, November).
-\emph{Auditory comprehension of double versus single modal constructions
-in {M}ainstream {A}merican {E}nglish listeners}. Poster session
-presented at the {60th Annual Meeting of the Psychonomic Society,
-Montr{é}al, Qu{é}bec, Canada}.
+Auditory comprehension of double versus single modal constructions in
+Mainstream American English listeners {[}Poster session{]}. 60th Annual
+Meeting of the Psychonomic Society, Montréal, Québec, Canada.
 
-\leavevmode\hypertarget{ref-1}{}%
-Zaharchuk, H. A. (2015, June). \emph{Does linguistic experience change
-mental representations of pitch?} Poster session presented at the
-{University of Chicago Undergraduate Research Symposium, Chicago,
-Illinois}.
+\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
+Zaharchuk, H. A. (2015, June). Does linguistic experience change mental
+representations of pitch? {[}Poster session{]}. University of Chicago
+Undergraduate Research Symposium, Chicago, Illinois.
+
+\hypertarget{invited-talks}{%
+\section{Invited talks}\label{invited-talks}}
+
+\begin{itemize}
+\tightlist
+\item
+  Processing Variation (ProVAR) group led by Dr.~Marije Soto, Federal
+  University of Rio de Janeiro
+\item
+  Psycholinguistic fieldwork guest lecture for Dr.~Colleen Balukas,
+  University at Buffalo (SUNY)
+\end{itemize}
 
 \hypertarget{research-experience}{%
 \section{Research experience}\label{research-experience}}
@@ -319,16 +352,52 @@ Illinois}.
 \begin{itemize}
 \tightlist
 \item
-  Ad hoc reviewer: \emph{Brain and Language}
+  Ad hoc reviewing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Brain and Language}
+  \item
+    \emph{Journal of Experimental Psychology: Learning, Memory, and
+    Cognition}
+  \item
+    \emph{Scientific Reports}
+  \end{itemize}
+\item
+  Workshops and tutorials
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Leader: \href{https://github.com/hollzzar/markdown-tutorial}{R
+    Markdown for Graduate Students} (2020),
+    \href{https://github.com/hollzzar/reports-with-markdown}{Creating
+    HTML Reports with R Markdown} (2020)
+  \item
+    Assistant:
+    \href{https://github.com/psu-psychology/r-bootcamp-2019}{R Bootcamp}
+    (2019) led by Dr.~Rick Gilmore
+  \end{itemize}
+\item
+  \href{https://www.hzaharchuk.com/rmarkdown-guide/}{R Markdown for
+  Psychology Graduate Students} resource
 \end{itemize}
 
 \hypertarget{skills}{%
 \section{Skills}\label{skills}}
 
-Programming: R, MATLAB, Python, \LaTeX, SQL, E-Prime, Praat, ELAN
-
-Languages: English (native proficiency), Spanish (intermediate
-proficiency)
+\begin{itemize}
+\tightlist
+\item
+  Natural languages: English, Spanish (B2/Intermediate)
+\item
+  Programming languages: R, MATLAB, SQL, Python
+\item
+  Software: E-Prime, Praat, Microsoft Suite, Adobe Suite
+\item
+  Typesetting: R Markdown, \LaTeX
+\end{itemize}
 
 \hypertarget{affiliations}{%
 \section{Affiliations}\label{affiliations}}
@@ -342,7 +411,11 @@ proficiency)
 \item
   Psychonomic Society
 \item
+  Society for the Neurobiology of Language
+\item
   Women in Cognitive Science
 \end{itemize}
+
+
 
 \end{document}

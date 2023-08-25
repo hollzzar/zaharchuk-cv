@@ -9,11 +9,7 @@ github: hollzzar
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
-    pandoc_args: ["--lua-filter", "/Users/hollyzaharchuk/Mirror/format_files/multiple-bibliographies-new.lua"]
     keep_tex: TRUE
-bibliography_main: my_cv.bib
-bibliography_present: my_presentations.bib
-nocite: "@*"
 docname: "Curriculum vitae"
 csl: apa.csl
 ---
@@ -29,7 +25,7 @@ library(rlang)
 
 # Research interests
 
-My research interests lie at the intersection of cognitive psychology and sociolinguistics. I use neuropsychological (EEG) and behavioral methods to understand how linguistic, cognitive, and social factors interact during language processing. My particular areas of study include phonetic and syntactic variation, code-switching, and network models of language.
+My research interests lie at the intersection of cognitive psychology and sociolinguistics. I use neuropsychological (EEG) and behavioral methods to understand how linguistic, cognitive, and social factors interact during language processing. My particular areas of study include phonetic and syntactic variation, bilingual code-switching, and network models of language.
 
 # Education
 
@@ -85,61 +81,21 @@ honors %>%
 
 # Publications
 
-```{r scholarship, echo=FALSE, eval=FALSE}
-## Chunk set to eval=FALSE
-## I wanted to keep the code I wrote to pull my pubs from Google Scholar, 
-## but I prefer to update them manually in BibDesk
-## Google Scholar entries aren't totally correct, so I have to edit the entries
-## a lot anyway
-
-#Pull publications from Google Scholar
-bib <- scholar::get_publications("XN7j-40AAAAJ") %>%
-  distinct(title, .keep_all = TRUE)
-
-#Reformat data
-bib <- bib %>%
-  transmute(bibtype = ifelse(grepl("Proceedings", bib$journal),
-                             "inproceedings",
-                             "article"),
-            booktitle = as.character(paste0("{",journal,"}")),
-            journaltitle = as.character(paste0("{",journal,"}")),
-            author = as.character(author),
-            title = as.character(title),
-            year,
-            key = row_number())
-
-#Add information for particular publications
-bib$editor[bib$title == "Beat gestures facilitate speech production"] <- "P Bello and M Guarini and M McShane and B Scassellati"
-bib$address[bib$title == "Beat gestures facilitate speech production"] <- "Red Hook, NY"
-bib$publisher[bib$title == "Beat gestures facilitate speech production"] <- "Curran Associates"
-bib$booktitle[bib$title == "Beat gestures facilitate speech production"] <- "{Proceedings of the 36th Annual Meeting of the Cognitive Science Society}"
-
-#Format as BibEntry
-bib <- bib %>% RefManageR::as.BibEntry()
-
-#Create bibliography
-bib %>% 
-  RefManageR::WriteBib("my_cv.bib")
-
+```{r scholarship}
 #Print bibliography
-bibliography_entries("my_cv.bib")
+bibliography_entries("my-cv.bib")
 ```
-
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
-\noindent
-
-::: {#refs_main}
-:::
-
 # Presentations
 
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
-\noindent
+```{r presentations}
+#Print bibliography
+bibliography_entries("my-presentations.bib")
+```
 
-::: {#refs_present}
-:::
+# Invited talks
+
+- Processing Variation (ProVAR) group led by Dr. Marije Soto, Federal University of Rio de Janeiro
+- Psycholinguistic fieldwork guest lecture for Dr. Colleen Balukas, University at Buffalo (SUNY) 
 
 # Research experience
 
@@ -257,17 +213,26 @@ service %>%
 
 # Academic service
 
-- Ad hoc reviewer: *Brain and Language*
+- Ad hoc reviewing
+  - *Brain and Language*
+  - *Journal of Experimental Psychology: Learning, Memory, and Cognition*
+  - *Scientific Reports*
+- Workshops and tutorials
+  - Leader: [R Markdown for Graduate Students](https://github.com/hollzzar/markdown-tutorial) (2020), [Creating HTML Reports with R Markdown](https://github.com/hollzzar/reports-with-markdown) (2020)
+  - Assistant: [R Bootcamp](https://github.com/psu-psychology/r-bootcamp-2019) (2019) led by Dr. Rick Gilmore
+- [R Markdown for Psychology Graduate Students](https://www.hzaharchuk.com/rmarkdown-guide/) resource
 
 # Skills
 
-Programming: R, MATLAB, Python, \LaTeX, SQL, E-Prime, Praat, ELAN
-
-Languages: English (native proficiency), Spanish (intermediate proficiency)
+- Natural languages: English, Spanish (B2/Intermediate)
+- Programming languages: R, MATLAB, SQL, Python
+- Software: E-Prime, Praat, Microsoft Suite, Adobe Suite
+- Typesetting: R Markdown, \LaTeX
 
 # Affiliations
 
 - Center for Language Science
 - Cognitive Neuroscience Society
 - Psychonomic Society
+- Society for the Neurobiology of Language
 - Women in Cognitive Science
