@@ -215,6 +215,7 @@ service %>%
 
 - Ad hoc reviewing
   - *Brain and Language*
+  - *Cognitive, Affective, and Behavioral Neuroscience*
   - *Journal of Experimental Psychology: Learning, Memory, and Cognition*
   - *Scientific Reports*
 - Workshops and tutorials
@@ -225,7 +226,7 @@ service %>%
 # Skills
 
 - Natural languages: English, Spanish (B2/Intermediate)
-- Programming languages: R, MATLAB, SQL, Python
+- Programming languages: R, MATLAB, Python, SQL
 - Software: E-Prime, Praat, Microsoft Suite, Adobe Suite
 - Typesetting: R Markdown, \LaTeX
 
