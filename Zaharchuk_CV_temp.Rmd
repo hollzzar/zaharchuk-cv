@@ -85,6 +85,14 @@ honors %>%
 #Print bibliography
 bibliography_entries("my-cv.bib")
 ```
+
+# Works in progress
+
+```{r wips}
+#Print bibliography
+bibliography_entries("my-wips.bib")
+```
+
 # Presentations
 
 ```{r presentations}
@@ -94,8 +102,12 @@ bibliography_entries("my-presentations.bib")
 
 # Invited talks
 
-- Processing Variation (ProVAR) group led by Dr. Marije Soto, Federal University of Rio de Janeiro
-- Psycholinguistic fieldwork guest lecture for Dr. Colleen Balukas, University at Buffalo (SUNY) 
+```{r invited}
+#Print bibliography
+bibliography_entries("my-invites.bib")
+```
+
+\pagebreak
 
 # Research experience
 
@@ -119,7 +131,8 @@ experience <- experience %>%
 #Print research experience information
 experience %>% 
   dplyr::filter(!is.na(pi)) %>%
-  detailed_entries(position, when, organization, where, c(pi, desc_1, desc_2), .protect = FALSE)
+  detailed_entries(position, when, organization, where, 
+                   c(pi, desc_1, desc_2, desc_3, desc_4), .protect = FALSE)
 ```
 
 # Professional experience
@@ -130,6 +143,8 @@ experience %>%
   dplyr::filter(is.na(pi)) %>%
   detailed_entries(position, when, organization, where, c(pi, desc_1, desc_2), .protect = FALSE)
 ```
+
+\pagebreak
 
 # Teaching experience
 
@@ -219,9 +234,9 @@ service %>%
   - *Journal of Experimental Psychology: Learning, Memory, and Cognition*
   - *Scientific Reports*
 - Workshops and tutorials
-  - Leader: [R Markdown for Graduate Students](https://github.com/hollzzar/markdown-tutorial) (2020), [Creating HTML Reports with R Markdown](https://github.com/hollzzar/reports-with-markdown) (2020)
-  - Assistant: [R Bootcamp](https://github.com/psu-psychology/r-bootcamp-2019) (2019) led by Dr. Rick Gilmore
-- [R Markdown for Psychology Graduate Students](https://www.hzaharchuk.com/rmarkdown-guide/) resource
+  - Leader: \href{https://github.com/hollzzar/markdown-tutorial}{\underline{R Markdown for Graduate Students}} (2020) for 20 students, \href{https://github.com/hollzzar/reports-with-markdown}{\underline{Creating HTML Reports with R Markdown}} (2020) for 10 students
+  - Assistant: \href{https://github.com/psu-psychology/r-bootcamp-2019}{\underline{R Bootcamp}} led by Dr. Rick Gilmore for 50+ students
+- \href{https://www.hzaharchuk.com/rmarkdown-guide/}{\underline{R Markdown for Psychology Graduate Students}} resource
 
 # Skills
 
