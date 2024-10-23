@@ -1,0 +1,89 @@
+---
+name: Holly A. Zaharchuk | Vita
+address: "University Park, Pennsylvania, United States"
+email: "hzaharchuk@psu.edu"
+www: www.hzaharchuk.com
+orcid: "0000-0002-7693-7807"
+github: hollzzar
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: TRUE
+docname: "Curriculum vitae"
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(vitae)
+library(lubridate)
+library(glue)
+library(rlang)
+```
+
+# Education
+
+```{r education}
+#Read in data
+education <- read_csv("./data/education.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")))
+
+#Create where and when fields
+education <- education %>%
+  arrange(desc(begin), end) %>%
+  group_by(degree) %>%
+  mutate(where = ifelse(n() > 1,
+                         as.character(glue("{nth(city, 1)}, {nth(region, 1)}, {nth(country,1)} 
+                                           and {nth(city, 2)}, {nth(region, 2)}, {nth(country,2)}")),
+                         as.character(glue("{city}, {region}")))) %>% 
+  ungroup() %>%
+  mutate(when = ifelse(is.na(end),
+                       as.character(glue("{year(begin)} - present")),
+                       as.character(glue("{year(begin)} - {year(end)}"))))
+
+#Print education information
+education %>% 
+  detailed_entries(degree, when, university, where, c(advisor, thesis), .protect = FALSE)
+```
+
+# Honors and awards
+
+```{r honors}
+#Read in data
+honors <- read_csv("./data/honors.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")))
+
+#Create where and when fields
+honors <- honors %>%
+  arrange(order) %>%
+  mutate(where = as.character(glue("{city}, {region}")),
+         when = ifelse(is.na(begin), "Postponed due to COVID-19",
+                       ifelse(is.na(year(end)),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                              ifelse(end==begin,
+                                     as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                                     as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}"))))))
+
+#Print honors and awards information
+honors %>% 
+  detailed_entries(when=when, with=award, where=university, what=desc)
+```
+
+# Publications
+
+```{r scholarship}
+#Print bibliography
+bibliography_entries("my-cv.bib")
+```
+
+# Works in progress
+
+```{r wips}
+#Print bibliography
+bibliography_entries("my-wips.bib")
+```
