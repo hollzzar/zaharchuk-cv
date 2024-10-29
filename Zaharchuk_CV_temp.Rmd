@@ -1,8 +1,8 @@
 ---
 name: Holly A. Zaharchuk
-position: "PhD Candidate (she/her)"
-address: "University Park, Pennsylvania, United States"
-email: "hzaharchuk@psu.edu"
+position: "Postdoctoral researcher (she/her)"
+address: "Storrs, Connecticut, United States"
+email: "holly.zaharchuk@uconn.edu"
 www: www.hzaharchuk.com
 orcid: "0000-0002-7693-7807"
 github: hollzzar
@@ -25,7 +25,7 @@ library(rlang)
 
 # Research interests
 
-My research interests lie at the intersection of cognitive psychology and sociolinguistics. I use neuropsychological (EEG) and behavioral methods to understand how linguistic, cognitive, and social factors interact during language processing. My particular areas of study include phonetic and syntactic variation, bilingual code-switching, and network models of language.
+How does the brain respond to linguistic variation? I use a combination of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, manual response) methods to study the perception, representation, and processing of diverse speech signals. I am particularly interested in the effects of multilingual and multilectal experience on the language system.
 
 # Education
 
@@ -107,9 +107,7 @@ bibliography_entries("my-presentations.bib")
 bibliography_entries("my-invites.bib")
 ```
 
-\pagebreak
-
-# Research experience
+# Employment history
 
 ```{r experience-research}
 #Read in data
@@ -130,21 +128,9 @@ experience <- experience %>%
 
 #Print research experience information
 experience %>% 
-  dplyr::filter(!is.na(pi)) %>%
   detailed_entries(position, when, organization, where, 
-                   c(pi, desc_1, desc_2, desc_3, desc_4), .protect = FALSE)
+                   c(pi, desc_1, desc_2), .protect = FALSE)
 ```
-
-# Professional experience
-
-```{r experience-prof}
-#Print professional experience information
-experience %>% 
-  dplyr::filter(is.na(pi)) %>%
-  detailed_entries(position, when, organization, where, c(pi, desc_1, desc_2), .protect = FALSE)
-```
-
-\pagebreak
 
 # Teaching experience
 
@@ -175,59 +161,9 @@ teaching %>%
   detailed_entries(role, when, course, university, c(instructor, desc_1, desc_2), .protect = FALSE)
 ```
 
-# Outreach
-
-```{r outreach}
-#Read in data
-outreach <- read_csv("./data/outreach.csv",
-                      col_types = cols(
-                        begin = col_date("%m/%d/%y"),
-                        end = col_date("%m/%d/%y")))
-
-#Create where and when fields
-outreach <- outreach %>%
-  arrange(!is.na(desc(end)), desc(end), begin) %>%
-  mutate(where = as.character(glue("{city}, {region}")),
-         when = ifelse(is.na(year(end)),
-                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
-                       ifelse(end==begin,
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
-
-#Print outreach information
-outreach %>% 
-  detailed_entries(position, when, organization, where, c(desc_1, desc_2), .protect = FALSE)
-```
-
-# Community service
-
-```{r service}
-# Community service
-# echo=FALSE, eval=FALSE
-
-#Read in data
-service <- read_csv("./data/service.csv",
-                      col_types = cols(
-                        begin = col_date("%m/%d/%y"),
-                        end = col_date("%m/%d/%y")))
-
-#Create where and when fields
-service <- service %>%
-  arrange(!is.na(desc(end)), desc(end), begin) %>%
-  mutate(where = as.character(glue("{city}, {region}")),
-         when = ifelse(is.na(year(end)),
-                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
-                       ifelse(end==begin,
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
-
-#Print service information
-service %>% 
-  detailed_entries(position, when, organization, where, c(desc_1, desc_2))
-```
-
 # Academic service
 
+- Mentor for the \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}} program
 - Ad hoc reviewing
   - *Brain and Language*
   - *Cognitive, Affective, and Behavioral Neuroscience*
