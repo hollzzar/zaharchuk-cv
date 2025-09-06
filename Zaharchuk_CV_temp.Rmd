@@ -1,5 +1,6 @@
 ---
 name: Holly A. Zaharchuk
+pronouns: she/her
 position: "Postdoctoral researcher (she/her)"
 address: "Storrs, Connecticut, United States"
 email: "holly.zaharchuk@uconn.edu"
@@ -10,12 +11,14 @@ date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
     keep_tex: TRUE
+    page_total: true
 docname: "Curriculum vitae"
 csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
 library(tidyverse)
 library(vitae)
 library(lubridate)
@@ -25,7 +28,7 @@ library(rlang)
 
 # Research interests
 
-How does the brain respond to linguistic variation? I use a combination of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, manual response) methods to study the perception, representation, and processing of diverse speech signals. I am particularly interested in the effects of multilingual and multilectal experience on the language system.
+How does the brain respond to linguistic variation? I use a combination of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, response time/accuracy) methods to study the perception, representation, and processing of diverse speech signals. I am particularly interested in the effects of multilingual and multilectal experience on the language system.
 
 # Education
 
@@ -54,6 +57,32 @@ education %>%
   detailed_entries(degree, when, university, where, c(advisor, thesis), .protect = FALSE)
 ```
 
+# Academic employment
+
+```{r experience-research}
+#Read in data
+experience <- read_csv("./data/experience.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")))
+
+#Create where and when fields
+experience <- experience %>%
+  dplyr::filter(type == "academic") %>%
+  arrange(!is.na(desc(end)), desc(end), begin) %>%
+  mutate(where = as.character(glue("{city}, {region}")),
+         when = ifelse(is.na(year(end)),
+                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
+                       ifelse(end==begin,
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
+                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
+
+#Print research experience information
+experience %>% 
+  detailed_entries(position, when, organization, where, 
+                   c(pi, desc_1, desc_2), .protect = FALSE)
+```
+
 # Honors and awards
 
 ```{r honors}
@@ -79,25 +108,20 @@ honors %>%
   detailed_entries(when=when, with=award, where=university, what=desc)
 ```
 
-# Publications
+\newpage
+
+# Peer-reviewed publications
 
 ```{r scholarship}
 #Print bibliography
 bibliography_entries("my-cv.bib")
 ```
 
-# Works in progress
+# Manuscripts in progress
 
 ```{r wips}
 #Print bibliography
 bibliography_entries("my-wips.bib")
-```
-
-# Presentations
-
-```{r presentations}
-#Print bibliography
-bibliography_entries("my-presentations.bib")
 ```
 
 # Invited talks
@@ -107,29 +131,11 @@ bibliography_entries("my-presentations.bib")
 bibliography_entries("my-invites.bib")
 ```
 
-# Employment history
+# Conference presentations
 
-```{r experience-research}
-#Read in data
-experience <- read_csv("./data/experience.csv",
-                      col_types = cols(
-                        begin = col_date("%m/%d/%y"),
-                        end = col_date("%m/%d/%y")))
-
-#Create where and when fields
-experience <- experience %>%
-  arrange(!is.na(desc(end)), desc(end), begin) %>%
-  mutate(where = as.character(glue("{city}, {region}")),
-         when = ifelse(is.na(year(end)),
-                       as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - present")),
-                       ifelse(end==begin,
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)}")),
-                              as.character(glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - {month(end, label = TRUE, abbr = TRUE)} {year(end)}")))))
-
-#Print research experience information
-experience %>% 
-  detailed_entries(position, when, organization, where, 
-                   c(pi, desc_1, desc_2), .protect = FALSE)
+```{r presentations}
+#Print bibliography
+bibliography_entries("my-presentations.bib")
 ```
 
 # Teaching experience
@@ -163,28 +169,36 @@ teaching %>%
 
 # Academic service
 
-- Mentor for the \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}} program
 - Ad hoc reviewing
   - *Brain and Language*
   - *Cognitive, Affective, and Behavioral Neuroscience*
   - *Journal of Experimental Psychology: Learning, Memory, and Cognition*
+  - *Journal of Speech, Language, and Hearing Research*
+  - *Perspectives*
+  - *Psychonomic Bulletin & Review*
   - *Scientific Reports*
 - Workshops and tutorials
   - Leader: \href{https://github.com/hollzzar/markdown-tutorial}{\underline{R Markdown for Graduate Students}} (2020) for 20 students, \href{https://github.com/hollzzar/reports-with-markdown}{\underline{Creating HTML Reports with R Markdown}} (2020) for 10 students
   - Assistant: \href{https://github.com/psu-psychology/r-bootcamp-2019}{\underline{R Bootcamp}} led by Dr. Rick Gilmore for 50+ students
 - \href{https://www.hzaharchuk.com/rmarkdown-guide/}{\underline{R Markdown for Psychology Graduate Students}} resource
 
+# Outreach
+
+- Mentor with the \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}} program at UConn (2024-2025)
+- Volunteer with the \href{https://skoelab.speech-language-hearing.uconn.edu/}{\underline{Auditory Brain Research Lab}} to provide free hearing screenings in English and Spanish at the 4th Latin Multicultural Latin Festival (July 2025, Willimantic, CT)
+
 # Skills
 
 - Natural languages: English, Spanish (B2/Intermediate)
 - Programming languages: R, MATLAB, Python, SQL
-- Software: E-Prime, Praat, Microsoft Suite, Adobe Suite
-- Typesetting: R Markdown, \LaTeX
+- Experiment programming: E-Prime, PsychoPy, Gorilla, LabVanced, Pavlovia
+- Acoustic analysis: Praat
 
 # Affiliations
 
-- Center for Language Science
+- Center for Language Science (Penn State)
 - Cognitive Neuroscience Society
+- Institute for the Brain and Cognitive Sciences (UConn)
 - Psychonomic Society
 - Society for the Neurobiology of Language
 - Women in Cognitive Science

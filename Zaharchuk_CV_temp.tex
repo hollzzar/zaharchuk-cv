@@ -83,25 +83,39 @@
 
 
 % Pandoc CSL macros
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{2em}
-\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
   \fi
- }%
- {}
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -113,6 +127,10 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 % 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {September 2025}
+    {Holly A. Zaharchuk~~~·~~~Curriculum vitae}
+  {\thepage~ of \pageref{LastPage}~}
 
 
 %-------------------------------------------------------------------------------
@@ -122,18 +140,16 @@
 
 
 
-\hypertarget{research-interests}{%
-\section{Research interests}\label{research-interests}}
+\section{Research interests}\label{research-interests}
 
 How does the brain respond to linguistic variation? I use a combination
-of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, manual
-response) methods to study the perception, representation, and
+of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, response
+time/accuracy) methods to study the perception, representation, and
 processing of diverse speech signals. I am particularly interested in
 the effects of multilingual and multilectal experience on the language
 system.
 
-\hypertarget{education}{%
-\section{Education}\label{education}}
+\section{Education}\label{education}
 
 \begin{cventries}
     \cventry{Ph.D., Psychology and Language Science, Specialization in Cognitive and Affective Neuroscience}{The Pennsylvania State University}{University Park, Pennsylvania}{2018 - 2024}{\begin{cvitems}
@@ -150,178 +166,13 @@ system.
 \end{cvitems}}
 \end{cventries}
 
-\hypertarget{honors-and-awards}{%
-\section{Honors and awards}\label{honors-and-awards}}
-
-\begin{cventries}
-    \cventry{NSF grant for doctoral research on human language (SBE-2234907)}{Doctoral Dissertation Research Improvement Grant (Ling-DDRI)}{The Pennsylvania State University}{Feb 2023 - Dec 2023}{}\vspace{-4.0mm}
-    \cventry{NSF grant for international language research (OISE-1545900)}{Partnerships for International Research and Education Fellowship (PIRE)}{The Pennsylvania State University}{May 2022 - Jun 2022}{}\vspace{-4.0mm}
-    \cventry{Travel award for professional development}{Adele Miccio Memorial Travel Award}{The Pennsylvania State University}{Dec 2021}{}\vspace{-4.0mm}
-    \cventry{Competitive five-year fellowship for research doctoral students (100 awarded per year University-wide)}{University Graduate Fellowship}{The Pennsylvania State University}{Aug 2018 - Aug 2024}{}\vspace{-4.0mm}
-    \cventry{Four-year merit scholarship for undergraduate students}{University Scholar Award}{The University of Chicago}{Sep 2011 - Jun 2015}{}\vspace{-4.0mm}
-\end{cventries}
-
-\hypertarget{publications}{%
-\section{Publications}\label{publications}}
-
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
-Zaharchuk, H. A., \& Karuza, E. A. (2021). Multilayer networks: An
-untapped tool for understanding bilingual neurocognition. \emph{Brain
-and Language}, \emph{220}, 104977.
-
-\leavevmode\vadjust pre{\hypertarget{ref-3}{}}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2021). Are our brains
-more prescriptive than our mouths? Experience with dialectal variation
-in syntax differentially impacts ERPs and behavior. \emph{Brain and
-Language}, \emph{218}, 104949.
-
-\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
-Lucero, C., Zaharchuk, H., \& Casasanto, D. (2014). Beat gestures
-facilitate speech production. In P. Bello, M. Guarini, M. McShane, \& B.
-Scassellati (Eds.), \emph{Proceedings of the 36th Annual Meeting of the
-Cognitive Science Society}. Red Hook, NY: Curran Associates.
-
-\hypertarget{works-in-progress}{%
-\section{Works in progress}\label{works-in-progress}}
-
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-5}{}}%
-Litcofsky, K., Zaharchuk, H. A., \& Van Hell, J. G. (2024).
-Cross-modality structural priming in dialogue is influenced by
-interlocutor accent {[}Manuscript submitted for publication{]}.
-\emph{Journal of Neurolinguistics}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-4}{}}%
-Miller, A. R., Jończyk, R., Zaharchuk, H. A., \& Van Hell, J. G. (2024).
-Unlocking second language novel metaphor processing: Behavioral and ERP
-insights from first and second-language English users {[}Manuscript
-submitted for publication{]}. \emph{Psychophysiology}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-6}{}}%
-Zaharchuk, H. A., Medina, V., Paterno, S., Viswanathan, N., \& Van Hell,
-J. G. (2024). Sentential context impacts bilingual speech-in-speech
-recognition {[}Manuscript in preparation{]}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-7}{}}%
-Zaharchuk, H. A., \& Van Hell, J. G. (2024). The effects of variability
-and similarity on generalization across spanish-accented english talkers
-{[}Manuscript in preparation{]}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-8}{}}%
-Zaharchuk, H. A., Walker, A. J., Miller, A. R., Fernandez, C. B., \& Van
-Hell, J. G. (2024). Anticipating challenges in lexical access: EEGs and
-cross-dialectal communication {[}Manuscript in preparation{]}.
-\emph{Journal of Laboratory Phonology}.
-
-\hypertarget{presentations}{%
-\section{Presentations}\label{presentations}}
-
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-11}{}}%
-Zaharchuk, H. A., \& Van Hell, J. G. (2024, November). The
-neurocognitive correlates of talker-specific adaptation to
-spanish-accented speech {[}Poster session{]}. 65th Annual Meeting of the
-Psychonomic Society, New York City, New York.
-
-\leavevmode\vadjust pre{\hypertarget{ref-10}{}}%
-Walker, A., Zaharchuk, H. A., Miller, A. R., \& Van Hell, J. G. (2023,
-December). Your brain on accents: Profiles of event related potentials
-in cross-dialectal listening in the US english context {[}Poster
-session{]}. 185th Meeting of the Acoustical Society of America, Sydney,
-Australia.
-
-\leavevmode\vadjust pre{\hypertarget{ref-9}{}}%
-Zaharchuk, H. A., \& Van Hell, J. G. (2023, October). Investigating the
-roles of acoustic-phonetic and lexico-semantic processing in resolving
-perceptual ambiguity in spanish-accented english {[}Poster session{]}.
-15th Annual Meeting of the Society for the Neurobiology of Language
-(SNL), Marseille, France.
-
-\leavevmode\vadjust pre{\hypertarget{ref-8}{}}%
-Zaharchuk, H. A., Lipski, J., \& Van Hell, J. G. (2023, August). Mi casa
-es tu posá: Exploring the bilingual mental lexicon in speakers of
-spanish and palenquero {[}Poster session{]}. Architectures and
-Mechanisms for Language Processing Conference (AMLaP 29), Donostia-San
-Sebastián, Spain.
-
-\leavevmode\vadjust pre{\hypertarget{ref-6}{}}%
-Zaharchuk, H. A., Medina, V., Paterno, S., Viswanathan, N., \& Van Hell,
-J. G. (2023, March). Sentential context impacts bilingual
-speech-in-speech recognition {[}Poster session{]}. 36th Annual
-Conference on Human Sentence Processing (HSP), Pittsburgh, Pennsylvania.
-
-\leavevmode\vadjust pre{\hypertarget{ref-7}{}}%
-Zaharchuk, H. A., Walker, A., \& Van Hell, J. G. (2023, March). Tracking
-the time-course of cross-dialect comprehension with ERPs {[}Oral and
-poster sessions{]}. 30th Annual Meeting of the Cognitive Neuroscience
-Society (CNS), San Francisco, California.
-
-\leavevmode\vadjust pre{\hypertarget{ref-5}{}}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2022, November).
-Experiencia con variación dialéctica en sintaxis afecta el procesamiento
-de lenguaje {[}Plenary session{]}. III Congreso Paraguayo de Lingüı́stica
-Aplicada (CONPLA), Asunción, Paraguay.
-
-\leavevmode\vadjust pre{\hypertarget{ref-4}{}}%
-Walker, A., Zaharchuk, H. A., Fernandez, C. B., \& Van Hell, J. G.
-(2021, August). The role of dialect expectation on lexical processing:
-EEG evidence {[}Oral session{]}. 5th Variation and Language Processing
-Conference (VALP5), Copenhagen, Denmark.
-
-\leavevmode\vadjust pre{\hypertarget{ref-3}{}}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2020, May). We
-{``might could''} revisit syntactic processing: Studying dialectal
-variation with event-related potentials {[}Poster session{]}. 27th
-Annual Meeting of the Cognitive Neuroscience Society (CNS), Boston,
-Massachusetts.
-
-\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2019, November).
-Auditory comprehension of double versus single modal constructions in
-Mainstream American English listeners {[}Poster session{]}. 60th Annual
-Meeting of the Psychonomic Society, Montréal, Québec, Canada.
-
-\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
-Zaharchuk, H. A. (2015, June). Does linguistic experience change mental
-representations of pitch? {[}Poster session{]}. University of Chicago
-Undergraduate Research Symposium, Chicago, Illinois.
-
-\hypertarget{invited-talks}{%
-\section{Invited talks}\label{invited-talks}}
-
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
-Zaharchuk, H. A. (2023). Sociolinguistics in the lab and the field.
-Invited lecture, University at Buffalo, March 13.
-
-\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
-Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2022). Are our brains
-more prescriptive than our mouths? Experience with dialectal variation
-in syntax differentially impacts ERPs and behavior. Invited lecture,
-Processing Variation (ProVAR), Federal University of Rio de Janeiro,
-February 14.
-
-\hypertarget{employment-history}{%
-\section{Employment history}\label{employment-history}}
+\section{Academic employment}\label{academic-employment}
 
 \begin{cventries}
     \cventry{Postdoctoral researcher}{Language and Brain Lab}{Storrs, Connecticut}{Aug 2024 - present}{\begin{cvitems}
 \item Principal investigator: Dr. Emily B. Myers
-\item Research areas: speech perception in young adult, older adult, and clinical populations
+\item Research areas: neurobiology of speech perception in young adults, older adults, and persons with aphasia
 \item Responsibilities: design, implement, and analyze research projects investigating laterality, gradiency, and talker specificity in speech perception with fMRI, TMS, and eye-tracking (NIH R0I: 5R01DC013064-09)
-\end{cvitems}}
-    \cventry{Financial analyst}{Consumer Financial Protection Bureau}{Washington, District of Columbia}{Jul 2017 - Jul 2018}{\begin{cvitems}
-\item Collaborated with the Consumer Education and Engagement Division to write a \href{https://www.consumerfinance.gov/about-us/blog/five-ways-banks-and-lenders-work-people-who-speak-or-understand-limited-english/}{\underline{spotlight report on language access}} for limited English proficient consumers as a member of the Language Access Task Force
-\item Researched debt collection and debt relief, particularly in the credit card and student loan markets, for the Consumer Lending, Reporting, and Collections Markets team
-\end{cvitems}}
-    \cventry{Director's financial analyst}{Consumer Financial Protection Bureau}{Washington, District of Columbia}{Jul 2015 - Jul 2017}{\begin{cvitems}
-\item Supported the policy and research teams in the Office of Fair Lending and Equal Opportunity
-\item Performed business analytics, tracking, and reporting in the Supervision, Enforcement, and Fair Lending Front Office
-\end{cvitems}}
-    \cventry{Program and operations assistant}{Research Development Support (formerly Arete)}{Chicago, Illinois}{Feb 2013 - Jun 2015}{\begin{cvitems}
-\item Partnered with The University of Chicago research administration support faculty members pursuing complex research initiatives
-\item Provided program analysis, strategic planning, business metrics, and event support
 \end{cvitems}}
     \cventry{Undergraduate research assistant}{Experience and Cognition Lab}{Chicago, Illinois}{Sep 2013 - Jun 2015}{\begin{cvitems}
 \item Principal investigator: Dr. Daniel Casasanto
@@ -330,8 +181,184 @@ February 14.
 \end{cvitems}}
 \end{cventries}
 
-\hypertarget{teaching-experience}{%
-\section{Teaching experience}\label{teaching-experience}}
+\section{Honors and awards}\label{honors-and-awards}
+
+\begin{cventries}
+    \cventry{NSF grant for doctoral research on human language (SBE-2234907)}{Doctoral Dissertation Research Improvement Grant (Ling-DDRI)}{The Pennsylvania State University}{Feb 2023 - Feb 2025}{}\vspace{-4.0mm}
+    \cventry{NSF grant for international language research (OISE-1545900)}{Partnerships for International Research and Education Fellowship (PIRE)}{The Pennsylvania State University}{May 2022 - Jun 2022}{}\vspace{-4.0mm}
+    \cventry{Travel award for professional development}{Adele Miccio Memorial Travel Award}{The Pennsylvania State University}{Dec 2021}{}\vspace{-4.0mm}
+    \cventry{Competitive five-year fellowship for research doctoral students (100 awarded per year University-wide)}{University Graduate Fellowship}{The Pennsylvania State University}{Aug 2018 - Aug 2024}{}\vspace{-4.0mm}
+    \cventry{Four-year merit scholarship for undergraduate students}{University Scholar Award}{The University of Chicago}{Sep 2011 - Jun 2015}{}\vspace{-4.0mm}
+\end{cventries}
+
+\newpage
+
+\section{Peer-reviewed publications}\label{peer-reviewed-publications}
+
+\phantomsection\label{refs-5d29dfe3f6931bc5ebb703945e39dbbd}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-4}
+Miller, A. R., Jończyk, R., Zaharchuk, H. A., \& Van Hell, J. G. (2025).
+Unlocking second language novel metaphor processing: Behavioral and ERP
+insights from first and second‐language English users.
+\emph{Psychophysiology}, \emph{62}(5), e70066.
+
+\bibitem[\citeproctext]{ref-2}
+Zaharchuk, H. A., \& Karuza, E. A. (2021). Multilayer networks: An
+untapped tool for understanding bilingual neurocognition. \emph{Brain
+and Language}, \emph{220}, 104977.
+
+\bibitem[\citeproctext]{ref-3}
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2021). Are our brains
+more prescriptive than our mouths? Experience with dialectal variation
+in syntax differentially impacts ERPs and behavior. \emph{Brain and
+Language}, \emph{218}, 104949.
+
+\bibitem[\citeproctext]{ref-1}
+Lucero, C., Zaharchuk, H., \& Casasanto, D. (2014). Beat gestures
+facilitate speech production. In P. Bello, M. Guarini, M. McShane, \& B.
+Scassellati (Eds.), \emph{Proceedings of the 36th Annual Meeting of the
+Cognitive Science Society}. Red Hook, NY: Curran Associates.
+
+\end{CSLReferences}
+
+\section{Manuscripts in progress}\label{manuscripts-in-progress}
+
+\phantomsection\label{refs-0844988e4f39c4f0b3d5e6cd34679a20}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-5}
+Litcofsky, K., Zaharchuk, H. A., \& Van Hell, J. G. (2025).
+Cross-modality structural priming in dialogue is influenced by
+interlocutor accent {[}Manuscript submitted, in revision{]}.
+\emph{Journal of Neurolinguistics}.
+
+\bibitem[\citeproctext]{ref-6}
+Zaharchuk, H. A., Medina, V., Paterno, S., Viswanathan, N., \& Van Hell,
+J. G. (2025). Sentential context impacts bilingual speech-in-speech
+recognition {[}Manuscript in preparation{]}.
+
+\bibitem[\citeproctext]{ref-9}
+Zaharchuk, H. A., Olson, H. E., Mechtenburg, H., Phillips, M. C., \&
+Myers, E. B. (2025). Measuring age-related differences in phonetic
+gradiency with the visual analogue scale and eye tracking {[}Manuscript
+submitted, under review{]}. \emph{Journal of the Acoustical Society of
+America}.
+
+\bibitem[\citeproctext]{ref-7}
+Zaharchuk, H. A., \& Van Hell, J. G. (2025). The effects of exposure
+variability and similarity on talker-independent adaptation to
+Spanish-accented English {[}Manuscript submitted, in revision{]}.
+\emph{Journal of Memory and Language}.
+
+\bibitem[\citeproctext]{ref-8}
+Zaharchuk, H. A., Walker, A. J., Miller, A. R., Fernandez, C. B., \& Van
+Hell, J. G. (2025). Expecting a challenge: A behavioral and
+neurophysiological investigation of talker identity in cross-dialectal
+speech perception {[}Manuscript submitted, in revision{]}. \emph{Journal
+of Laboratory Phonology}.
+
+\end{CSLReferences}
+
+\section{Invited talks}\label{invited-talks}
+
+\phantomsection\label{refs-0ea7268aa10e87f51199d3c1feb6a5a4}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-2}
+Zaharchuk, H. A. (2023). Sociolinguistics in the lab and the field.
+Invited lecture, University at Buffalo, March 13.
+
+\bibitem[\citeproctext]{ref-1}
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2022). Are our brains
+more prescriptive than our mouths? Experience with dialectal variation
+in syntax differentially impacts ERPs and behavior. Invited lecture,
+Processing Variation (ProVAR), Federal University of Rio de Janeiro,
+February 14.
+
+\end{CSLReferences}
+
+\section{Conference presentations}\label{conference-presentations}
+
+\phantomsection\label{refs-7e229db543760ad5dcea7b49e0f35653}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-12}
+Zaharchuk, H. A., Washington, P. N., \& Myers, E. B. (2025, September).
+Hemispheric differences in speech perception: The role of right temporal
+regions in talker-specific learning {[}Poster session{]}. 17th Annual
+Meeting of the Society for the Neurobiology of Language (SNL),
+Washington, DC.
+
+\bibitem[\citeproctext]{ref-11}
+Zaharchuk, H. A., \& Van Hell, J. G. (2024, November). The
+neurocognitive correlates of talker-specific adaptation to
+spanish-accented speech {[}Poster session{]}. 65th Annual Meeting of the
+Psychonomic Society, New York City, New York.
+
+\bibitem[\citeproctext]{ref-10}
+Walker, A., Zaharchuk, H. A., Miller, A. R., \& Van Hell, J. G. (2023,
+December). Your brain on accents: Profiles of event related potentials
+in cross-dialectal listening in the US english context {[}Poster
+session{]}. 185th Meeting of the Acoustical Society of America, Sydney,
+Australia.
+
+\bibitem[\citeproctext]{ref-9}
+Zaharchuk, H. A., \& Van Hell, J. G. (2023, October). Investigating the
+roles of acoustic-phonetic and lexico-semantic processing in resolving
+perceptual ambiguity in spanish-accented english {[}Poster session{]}.
+15th Annual Meeting of the Society for the Neurobiology of Language
+(SNL), Marseille, France.
+
+\bibitem[\citeproctext]{ref-8}
+Zaharchuk, H. A., Lipski, J., \& Van Hell, J. G. (2023, August). Mi casa
+es tu posá: Exploring the bilingual mental lexicon in speakers of
+spanish and palenquero {[}Poster session{]}. Architectures and
+Mechanisms for Language Processing Conference (AMLaP 29), Donostia-San
+Sebastián, Spain.
+
+\bibitem[\citeproctext]{ref-6}
+Zaharchuk, H. A., Medina, V., Paterno, S., Viswanathan, N., \& Van Hell,
+J. G. (2023, March). Sentential context impacts bilingual
+speech-in-speech recognition {[}Poster session{]}. 36th Annual
+Conference on Human Sentence Processing (HSP), Pittsburgh, Pennsylvania.
+
+\bibitem[\citeproctext]{ref-7}
+Zaharchuk, H. A., Walker, A., \& Van Hell, J. G. (2023, March). Tracking
+the time-course of cross-dialect comprehension with ERPs {[}Oral and
+poster sessions{]}. 30th Annual Meeting of the Cognitive Neuroscience
+Society (CNS), San Francisco, California.
+
+\bibitem[\citeproctext]{ref-5}
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2022, November).
+Experiencia con variación dialéctica en sintaxis afecta el procesamiento
+de lenguaje {[}Plenary session{]}. III Congreso Paraguayo de Lingüı́stica
+Aplicada (CONPLA), Asunción, Paraguay.
+
+\bibitem[\citeproctext]{ref-4}
+Walker, A., Zaharchuk, H. A., Fernandez, C. B., \& Van Hell, J. G.
+(2021, August). The role of dialect expectation on lexical processing:
+EEG evidence {[}Oral session{]}. 5th Variation and Language Processing
+Conference (VALP5), Copenhagen, Denmark.
+
+\bibitem[\citeproctext]{ref-3}
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2020, May). We
+{``might could''} revisit syntactic processing: Studying dialectal
+variation with event-related potentials {[}Poster session{]}. 27th
+Annual Meeting of the Cognitive Neuroscience Society (CNS), Boston,
+Massachusetts.
+
+\bibitem[\citeproctext]{ref-2}
+Zaharchuk, H. A., Shevlin, A., \& Van Hell, J. G. (2019, November).
+Auditory comprehension of double versus single modal constructions in
+Mainstream American English listeners {[}Poster session{]}. 60th Annual
+Meeting of the Psychonomic Society, Montréal, Québec, Canada.
+
+\bibitem[\citeproctext]{ref-1}
+Zaharchuk, H. A. (2015, June). Does linguistic experience change mental
+representations of pitch? {[}Poster session{]}. University of Chicago
+Undergraduate Research Symposium, Chicago, Illinois.
+
+\end{CSLReferences}
+
+\section{Teaching experience}\label{teaching-experience}
 
 \begin{cventries}
     \cventry{Instructor}{Psychology of language}{The Pennsylvania State University}{Jan 2024 - May 2024}{\begin{cvitems}
@@ -359,15 +386,10 @@ February 14.
 \end{cvitems}}
 \end{cventries}
 
-\hypertarget{academic-service}{%
-\section{Academic service}\label{academic-service}}
+\section{Academic service}\label{academic-service}
 
 \begin{itemize}
 \tightlist
-\item
-  Mentor for the
-  \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}}
-  program
 \item
   Ad hoc reviewing
 
@@ -380,6 +402,12 @@ February 14.
   \item
     \emph{Journal of Experimental Psychology: Learning, Memory, and
     Cognition}
+  \item
+    \emph{Journal of Speech, Language, and Hearing Research}
+  \item
+    \emph{Perspectives}
+  \item
+    \emph{Psychonomic Bulletin \& Review}
   \item
     \emph{Scientific Reports}
   \end{itemize}
@@ -404,8 +432,22 @@ February 14.
   resource
 \end{itemize}
 
-\hypertarget{skills}{%
-\section{Skills}\label{skills}}
+\section{Outreach}\label{outreach}
+
+\begin{itemize}
+\tightlist
+\item
+  Mentor with the
+  \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}}
+  program at UConn (2024-2025)
+\item
+  Volunteer with the
+  \href{https://skoelab.speech-language-hearing.uconn.edu/}{\underline{Auditory Brain Research Lab}}
+  to provide free hearing screenings in English and Spanish at the 4th
+  Latin Multicultural Latin Festival (July 2025, Willimantic, CT)
+\end{itemize}
+
+\section{Skills}\label{skills}
 
 \begin{itemize}
 \tightlist
@@ -414,20 +456,22 @@ February 14.
 \item
   Programming languages: R, MATLAB, Python, SQL
 \item
-  Software: E-Prime, Praat, Microsoft Suite, Adobe Suite
+  Experiment programming: E-Prime, PsychoPy, Gorilla, LabVanced,
+  Pavlovia
 \item
-  Typesetting: R Markdown, \LaTeX
+  Acoustic analysis: Praat
 \end{itemize}
 
-\hypertarget{affiliations}{%
-\section{Affiliations}\label{affiliations}}
+\section{Affiliations}\label{affiliations}
 
 \begin{itemize}
 \tightlist
 \item
-  Center for Language Science
+  Center for Language Science (Penn State)
 \item
   Cognitive Neuroscience Society
+\item
+  Institute for the Brain and Cognitive Sciences (UConn)
 \item
   Psychonomic Society
 \item
@@ -437,5 +481,5 @@ February 14.
 \end{itemize}
 
 
-
+\label{LastPage}~
 \end{document}

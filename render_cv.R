@@ -2,6 +2,7 @@
 library(rmarkdown)
 library(stringr)
 library(magrittr)
+library(vitae)
 
 # Set working directory
 setwd("~/Mirror/zaharchuk-cv")
@@ -20,4 +21,4 @@ readr::read_lines("Zaharchuk_CV_temp.tex") %>%
   readr::write_lines("Zaharchuk_CV.tex")
 
 # Compile PDF
-tinytex::latexmk("Zaharchuk_CV.tex", engine = "xelatex") 
+tinytex::latexmk("Zaharchuk_CV.tex", engine = "xelatex")
