@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.6)  6 SEP 2025 11:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.4)  4 JAN 2026 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Zaharchuk_CV_temp.tex
 (./Zaharchuk_CV_temp.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-08-13>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
 (./awesome-cv.cls
 Document Class: awesome-cv 2017/02/05 v1.6.1 Awesome Curriculum Vitae Class
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -25,7 +25,7 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen149
 \ar@mcellbox=\box53
 \extrarowheight=\dimen150
@@ -104,7 +104,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 274.
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -135,23 +135,23 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count287
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-08-13 L3 programming layer (loader) 
+Package: expl3 2025-12-29 L3 programming layer (loader) 
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2025-06-09 L3 backend support: XeTeX
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
 \g__graphics_track_int=\count288
 \g__pdfannot_backend_int=\count289
 \g__pdfannot_backend_link_int=\count290
 ))
-Package: xparse 2024-08-16 L3 Experimental document command parser
+Package: xparse 2025-10-09 L3 Experimental document command parser
 )
-Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count291
 \l__fontspec_language_int=\count292
 \l__fontspec_strnum_int=\count293
@@ -167,13 +167,13 @@ Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpb_dim=\dimen163
 \l__fontspec_tmpc_dim=\dimen164
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
 Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
@@ -307,7 +307,7 @@ LaTeX Encoding Info:    Redeclaring text symbol \texteuro (encoding TS1) on inpu
 LaTeX Encoding Info:    Redeclaring text symbol \texttimes (encoding TS1) on input line 193.
 LaTeX Encoding Info:    Redeclaring text symbol \textdiv (encoding TS1) on input line 194.
 )) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip85
 For additional information on amsmath, use the `?' option.
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -367,8 +367,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \multlinegap=\skip86
 \multlinetaggap=\skip87
 \mathdisplay@stack=\toks27
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 )
 \g__um_fam_int=\count314
 \g__um_fonts_used_int=\count315
@@ -378,15 +378,19 @@ LaTeX Info: Redefining \] on input line 2950.
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-xeluatex.tex)) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/academicons/academicons.sty
-Package: academicons 2021/11/26 v1.9.1 Academicons Icons
-) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/sourcesanspro/sourcesanspro.sty
+) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-xeluatex.tex)) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/academicons/academicons.sty
+Package: academicons 2025/09/20 v1.9.6-2 Academicons Icons
+Missing character: There is no   (U+0020) in font [academicons.otf]/OT!
+Missing character: There is no   (U+0020) in font [academicons.otf]/OT!
+Missing character: There is no   (U+0020) in font [academicons.otf]/OT:language=dflt;!
+(/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/academicons/academicons-xeluatex.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/academicons/academicons-generic.tex)) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/sourcesanspro/sourcesanspro.sty
 Package: sourcesanspro 2018/05/19 v2.7 Adobe's Source Sans Pro typeface
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks28
 \XKV@tempa@toks=\toks29
+\XKV@tempb@toks=\toks30
 )
 \XKV@depth=\count317
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -396,9 +400,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/SourceSansPro(1)/bx/n on input line 123.
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2025/07/08 version 6.7.1 text color boxes
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks30
+\pgfutil@everybye=\toks31
 \pgfutil@tempdima=\dimen174
 \pgfutil@tempdimb=\dimen175
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -423,10 +427,10 @@ Package graphics Info: Driver file: xetex.def on input line 106.
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks33
+\pgfkeys@tmptoks=\toks34
 ))
 \pgf@x=\dimen178
 \pgf@y=\dimen179
@@ -444,9 +448,9 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \c@pgf@countb=\count319
 \c@pgf@countc=\count320
 \c@pgf@countd=\count321
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
 \pgf@sys@id@count=\count322
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
@@ -472,9 +476,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@dimen=\dimen188
 \pgfmath@count=\count326
 \pgfmath@box=\box59
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count327
 )) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -557,8 +561,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen271
 \pgffor@skip=\dimen272
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 )) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
@@ -593,8 +597,8 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks42
-\verbatim@line=\toks43
+\every@verbatim=\toks43
+\verbatim@line=\toks44
 \verbatim@in@stream=\read3
 ) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -615,7 +619,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box76
 \tcb@temp=\box77
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.7.1'
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
@@ -624,7 +628,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 \l__tikzfill_img_box=\box78
 )) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.7.1'
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
 ))) (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 (/Users/hollyzaharchuk/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
@@ -734,11 +738,11 @@ and I'll forget about whatever was undefined.
 
  
 Here is how much of TeX's memory you used:
- 32211 strings out of 470457
- 659279 string characters out of 5490337
- 1113844 words of memory out of 5000000
- 60066 multiletter control sequences out of 15000+600000
- 627465 words of font info for 76 fonts, out of 8000000 for 9000
+ 32327 strings out of 470195
+ 662996 string characters out of 5477273
+ 1119502 words of memory out of 5000000
+ 60436 multiletter control sequences out of 15000+600000
+ 628385 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,0n,135p,555b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,0n,135p,555b,308s stack positions out of 10000i,1000n,20000p,200000b,200000s
 No pages of output.

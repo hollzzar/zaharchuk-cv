@@ -12,6 +12,8 @@ output:
   vitae::awesomecv:
     keep_tex: TRUE
     page_total: true
+    latex_engine: xelatex
+    extra_dependencies: ["soul"]
 docname: "Curriculum vitae"
 csl: apa.csl
 ---
@@ -167,6 +169,8 @@ teaching %>%
   detailed_entries(role, when, course, university, c(instructor, desc_1, desc_2), .protect = FALSE)
 ```
 
+\newpage
+
 # Academic service
 
 - Ad hoc reviewing
@@ -178,14 +182,15 @@ teaching %>%
   - *Psychonomic Bulletin & Review*
   - *Scientific Reports*
 - Workshops and tutorials
-  - Leader: \href{https://github.com/hollzzar/markdown-tutorial}{\underline{R Markdown for Graduate Students}} (2020) for 20 students, \href{https://github.com/hollzzar/reports-with-markdown}{\underline{Creating HTML Reports with R Markdown}} (2020) for 10 students
-  - Assistant: \href{https://github.com/psu-psychology/r-bootcamp-2019}{\underline{R Bootcamp}} led by Dr. Rick Gilmore for 50+ students
-- \href{https://www.hzaharchuk.com/rmarkdown-guide/}{\underline{R Markdown for Psychology Graduate Students}} resource
+  - Leader: \href{https://github.com/hollzzar/markdown-tutorial}{\ul{R Markdown for Graduate Students}} (2020) for 20 students, \href{https://github.com/hollzzar/reports-with-markdown}{\ul{Creating HTML Reports with R Markdown}} (2020) for 10 students
+  - Assistant: \href{https://github.com/psu-psychology/r-bootcamp-2019}{\ul{R Bootcamp}} led by Dr. Rick Gilmore for 50+ students
+- \href{https://www.hzaharchuk.com/rmarkdown-guide/}{\ul{R Markdown for Psychology Graduate Students}} resource
 
 # Outreach
 
-- Mentor with the \href{https://magic.initiative.uconn.edu/}{\underline{Mentoring Aspiring Graduate students and building an Inclusive Community}} program at UConn (2024-2025)
-- Volunteer with the \href{https://skoelab.speech-language-hearing.uconn.edu/}{\underline{Auditory Brain Research Lab}} to provide free hearing screenings in English and Spanish at the 4th Latin Multicultural Latin Festival (July 2025, Willimantic, CT)
+- Developing a Community Engagement Training Program for researchers in collaboration with the \href{https://cncct.research.uconn.edu/}{\ul{NIH T32 Cognitive Neuroscience of Communication - Connecticut}} (CNC-CT) program
+- Volunteered with the \href{https://skoelab.speech-language-hearing.uconn.edu/}{\ul{Auditory Brain Research Lab}} to provide free hearing screenings in English and Spanish at the 4th Multicultural Latin Festival (July 2025, Willimantic, CT)
+- Mentored underrepresented and first-generation students applying for graduate programs in cognitive psychology as part of the \href{https://magic.initiative.uconn.edu/}{\ul{Mentoring Aspiring Graduate students and building an Inclusive Community}} (MAGIC) program at UConn (2024-2025)
 
 # Skills
 

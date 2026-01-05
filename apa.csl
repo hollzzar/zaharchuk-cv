@@ -298,7 +298,7 @@
           <date-part name="year"/>
           <date-part name="month"/>
           <date-part name="day"/>
-        </date>
+         </date>
       </if>
       <else>
         <date variable="issued">
