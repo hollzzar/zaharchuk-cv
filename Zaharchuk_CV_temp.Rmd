@@ -28,10 +28,6 @@ library(glue)
 library(rlang)
 ```
 
-# Research interests
-
-How does the brain respond to linguistic variation? I use a combination of neural (EEG, fMRI, TMS) and behavioral (eye-tracking, response time/accuracy) methods to study the perception, representation, and processing of diverse speech signals. I am particularly interested in the effects of multilingual experience on the language system.
-
 # Education
 
 ```{r education}
@@ -171,6 +167,7 @@ teaching %>%
 
 # Academic service
 
+- Editorial board member for the American Speech-Language-Hearing Association journal *Perspectives*
 - Ad hoc reviewing
   - *Brain and Language*
   - *Cognitive, Affective, and Behavioral Neuroscience*
@@ -194,7 +191,7 @@ teaching %>%
 
 - Natural languages: English, Spanish (B2/Intermediate)
 - Programming languages: R, MATLAB, Python, SQL
-- Experiment programming: E-Prime, PsychoPy, Gorilla, LabVanced, Pavlovia
+- Research and experiment platforms: E-Prime, PsychoPy, Gorilla, Experiment Builder, LabVanced, Pavlovia
 - Acoustic analysis: Praat
 
 # Affiliations

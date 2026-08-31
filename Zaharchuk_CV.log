@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.19)  19 FEB 2026 15:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.19)  26 AUG 2026 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,6 +790,12 @@ LaTeX Warning: Label `ref-1' multiply defined.
 LaTeX Warning: Label `ref-3' multiply defined.
 
 
+LaTeX Warning: Label `ref-13' multiply defined.
+
+
+LaTeX Warning: Label `ref-12' multiply defined.
+
+
 LaTeX Warning: Label `ref-11' multiply defined.
 
 
@@ -951,29 +957,31 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
 (Font)              scaled to size 16.0pt on input line 144.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 158.
+(Font)              scaled to size 10.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 158.
+(Font)              scaled to size 10.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 158.
+(Font)              scaled to size 9.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not available
-(Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 158.
+(Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 158.
+(Font)              scaled to size 9.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 158.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 158.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 158.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not available
-(Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 158.
+(Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 158.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 184.
+(Font)              scaled to size 10.95pt on input line 176.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 187.
+(Font)              scaled to size 10.95pt on input line 178.
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
+(Font)              scaled to size 16.0pt on input line 223.
 [1
 
 ] [2] [3] [4] (./Zaharchuk_CV.aux)
@@ -988,12 +996,12 @@ Package rerunfilecheck Info: File `Zaharchuk_CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33322 strings out of 470190
- 683121 string characters out of 5477215
- 1257237 words of memory out of 5000000
- 61356 multiletter control sequences out of 15000+600000
+ 33323 strings out of 470190
+ 683137 string characters out of 5477215
+ 1258243 words of memory out of 5000000
+ 61357 multiletter control sequences out of 15000+600000
  632390 words of font info for 131 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,11n,135p,550b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,12n,135p,550b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Zaharchuk_CV.pdf (4 pages).

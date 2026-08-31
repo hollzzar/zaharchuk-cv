@@ -28,4 +28,4 @@ readr::read_lines("Zaharchuk_CV_temp.tex") %>%
 
 # Compile PDF
 tinytex::latexmk("Zaharchuk_CV.tex", engine = "xelatex")
-
+# you'll get a bunch of warnings but it's ok
