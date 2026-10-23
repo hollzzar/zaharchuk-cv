@@ -167,7 +167,8 @@ teaching %>%
 
 # Academic service
 
-- Editorial board member for the American Speech-Language-Hearing Association journal *Perspectives*
+- Junior Member of the Editorial Board of *Brain and Language*
+- Member of the Editorial Board of *Perspectives* (American Speech-Language-Hearing Association) in the Cultural and Linguistic Diversity Special Interest Group
 - Ad hoc reviewing
   - *Brain and Language*
   - *Cognitive, Affective, and Behavioral Neuroscience*
@@ -184,8 +185,8 @@ teaching %>%
 # Outreach
 
 - Developing a Community Engagement Training Program for researchers in collaboration with the \href{https://cncct.research.uconn.edu/}{\ul{NIH T32 Cognitive Neuroscience of Communication - Connecticut}} (CNC-CT) program
+- Mentor underrepresented and first-generation students applying for graduate programs in cognitive psychology as part of the \href{https://magic.initiative.uconn.edu/}{\ul{Mentoring Aspiring Graduate students and building an Inclusive Community}} (MAGIC) program at UConn (2024-present)
 - Volunteered with the \href{https://skoelab.speech-language-hearing.uconn.edu/}{\ul{Auditory Brain Research Lab}} to provide free hearing screenings in English and Spanish at the 4th Multicultural Latin Festival (July 2025, Willimantic, CT)
-- Mentored underrepresented and first-generation students applying for graduate programs in cognitive psychology as part of the \href{https://magic.initiative.uconn.edu/}{\ul{Mentoring Aspiring Graduate students and building an Inclusive Community}} (MAGIC) program at UConn (2024-2025)
 
 # Skills
 
